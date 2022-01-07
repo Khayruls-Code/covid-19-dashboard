@@ -1,0 +1,210 @@
+/* header start */
+.header{
+  background: var(--secondary-bg);
+  padding: 20px 0;
+}
+.header .container{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.logo{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.logo img{
+  width: 2rem;
+}
+.header h1{
+  font-size: 1.5rem;
+  color: var(--white)
+}
+.header p{
+  color: var(--white);
+  font-weight: 500;
+}
+.header a{
+  font-size: 1.2rem;
+  color: var(--white);
+  font-weight: 500;
+}
+/* header end */
+
+/* global data start */
+.global{
+  margin-top: 15px;
+}
+.title{
+  color: var(--white);
+  font-weight: 500;
+  margin-bottom: 15px;
+  font-size: 20px;
+}
+.global-row{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+.last-update{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+.last-update > div{
+  width: 48.2%;
+  background: var(--secondary-bg);
+  text-align: center;
+  padding: 20px 15px;
+  border-radius: .3rem;
+}
+.last-update > div h1{
+  color: var(--white);
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+.last-update > div p{
+  color: var(--transparent-white);
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+.last-update > div ion-icon{
+  font-size: 2rem;
+  color: #fff;
+  border-radius: 50%;
+}
+.chart{
+  background: var(--secondary-bg);
+  border-radius: .3rem;
+  padding-bottom: 20px;
+}
+.indicate-color  {
+  display: flex; flex-wrap: wrap;
+  position: relative;
+  gap: 5px;
+}
+.indicate-color > div{
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 0px 20px;
+  color: var(--white);
+}
+/* global data end */
+
+/* all country data start*/
+.countries-update{
+  padding: 25px 0 50px;
+}
+.search-bar{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 20px 0;
+}
+.search-bar input{
+  padding: 8px 15px;
+  outline: none;
+  border: 1px solid var(--primary-bg);
+  background-color: var(--extra-transparent);
+  color: var(--white);
+  font-size: 1.1rem;
+}
+.search-bar input::placeholder{
+  color: var(--transparent-white);
+}
+.table-container{
+  height: 100vh;
+  overflow: scroll;
+  position: relative;
+}
+table{
+  width: 100%;
+  min-width: 1100px;
+  background-color: var(--secondary-bg);
+  border-collapse: collapse;
+}
+table thead{
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--secondary-bg);
+}
+table thead tr td{
+  padding: 15px 10px;
+  color: var(--white);
+  font-weight: 500;
+  font-size: 1.1rem;
+  text-align: center;
+}
+table tbody tr .name-flag{
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: var(--white);
+  font-size: 1rem;
+  font-weight: 500;
+}
+table tbody tr .name-flag img{
+  width: 40px;
+}
+table tbody tr td{
+  padding: 10px 15px;
+  border: none;
+  font-weight: 500;
+}
+table tbody tr td:first-child{
+  background: var(--secondary-bg);
+  color: var(--white);
+  text-align: center;
+}
+table tbody tr:nth-child(odd){
+  background-color: var(--extra-transparent);
+}
+table tbody tr:nth-child(even){
+  background-color: rgba(255, 255, 255, 0.15);
+}
+.table-container::-webkit-scrollbar ,
+body::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+.table-container::-webkit-scrollbar-thumb,
+body::-webkit-scrollbar-thumb{
+  background-color: var(--secondary-bg);
+}
+.table-container::-webkit-scrollbar-corner,
+body::-webkit-scrollbar-corner{
+  background: var(--primary-bg);
+}
+/* all country data end*/
+
+@media only screen and (max-width:900px){
+  .global-row{
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+@media only screen and (max-width:768px){
+  .search-bar{
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+@media only screen and (max-width:600px){
+  .header a{
+    display: none;
+  }
+}
+@media only screen and (max-width:500px){
+  .last-update > div{
+    width: 98%;
+  }
+}
+@media only screen and (max-width:450px){
+  .header .container{
+    flex-direction: column;
+    gap: 20px;
+  }
+}
